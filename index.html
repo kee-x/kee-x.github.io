@@ -1,15 +1,338 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kee Xiang Tan</title>
-</head>
-<body>
-    <h1>Hello, I'm Kee Xiang Tan</h1>
-    <p>NUS Business Analytics Undergraduate</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tan Kee Xiang | Portfolio</title>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>tester</li>
-    </ul>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 30px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #38bdf8;
+            color: #000;
+            border-radius: 8px;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* CARDS */
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #f8fafc;
+        }
+
+        .date {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #334155;
+            padding: 8px 14px;
+            border-radius: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #94a3b8;
+        }
+
+        @media(max-width:768px){
+            .hero h1{
+                font-size:2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="container">
+        <h1>Tan Kee Xiang</h1>
+
+        <p>
+            Business Analytics Undergraduate @ NUS<br>
+            Aspiring Data Scientist & Machine Learning Engineer
+        </p>
+
+        <div class="buttons">
+            <a class="btn" href="https://github.com/kee-x" target="_blank">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/kee-xiang-tan-157476163/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section>
+    <div class="container">
+        <h2>About Me</h2>
+
+        <div class="card">
+            <p>
+                I am currently pursuing a Bachelor of Science in Business Analytics at the
+                National University of Singapore with a focus on Machine Learning Analytics.
+
+                My interests lie in Artificial Intelligence, Machine Learning,
+                Data Engineering, Large Language Models, and Analytics.
+
+                Through internships and projects, I have developed experience in
+                LLM applications, geospatial analytics, predictive modelling,
+                knowledge graphs, and healthcare AI systems.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+
+<section>
+    <div class="container">
+        <h2>Education</h2>
+
+        <div class="card">
+            <h3>National University of Singapore</h3>
+            <div class="date">Aug 2023 - Present</div>
+
+            <p>
+                Bachelor of Science in Business Analytics
+            </p>
+
+            <ul>
+                <li>GPA: 4.22 / 5.0</li>
+                <li>Second Class Upper Honours</li>
+                <li>Specialisation in Machine Learning Analytics</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Ngee Ann Polytechnic</h3>
+            <div class="date">Apr 2018 - Apr 2021</div>
+
+            <p>Diploma with Merit in Financial Informatics</p>
+
+            <ul>
+                <li>GPA: 3.86</li>
+                <li>Director's List (2018 - 2020)</li>
+                <li>Specialisation in Financial Analytics</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section>
+    <div class="container">
+        <h2>Experience</h2>
+
+        <div class="card">
+            <h3>Data Scientist Intern — Ministry of Home Affairs</h3>
+            <div class="date">May 2025 - Dec 2025</div>
+
+            <ul>
+                <li>Built an LLM-driven NER and Relationship Extraction pipeline using GPT-4o, LangChain and Azure Document Intelligence.</li>
+                <li>Mapped Cyber Threat Intelligence reports into STIX-compliant structures.</li>
+                <li>Developed Neo4j knowledge graphs for visualising threat actor relationships.</li>
+                <li>Built large-scale geospatial analytics workflows using Databricks, PySpark, Apache Sedona and Uber H3.</li>
+                <li>Detected coordinated vessel movement patterns and maritime anomalies.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Machine Learning Researcher — Toyota Tsusho Asia Pacific</h3>
+            <div class="date">Sep 2020 - Feb 2021</div>
+
+            <ul>
+                <li>Developed machine learning models for supplier delivery delay prediction.</li>
+                <li>Performed feature engineering and model evaluation.</li>
+                <li>Built Tableau dashboards for supply chain analytics.</li>
+                <li>Generated insights on supplier performance and delivery reliability.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section>
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>Agentic Collaborative Reasoning for Cancer Research</h3>
+            <div class="date">National Cancer Centre Singapore | Jan 2026 - Apr 2026</div>
+
+            <ul>
+                <li>Designed a LangGraph multi-agent reasoning system.</li>
+                <li>Enabled clinicians to query OMOP CDM healthcare databases using natural language.</li>
+                <li>Implemented Human-in-the-Loop validation workflows.</li>
+                <li>Deployed locally using Ollama to ensure patient data privacy.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+
+<section>
+    <div class="container">
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+            <span class="skill">Python</span>
+            <span class="skill">Java</span>
+            <span class="skill">C#</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">SQL</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">UiPath</span>
+
+            <span class="skill">LangChain</span>
+            <span class="skill">LangGraph</span>
+            <span class="skill">LLMs</span>
+            <span class="skill">NLP</span>
+
+            <span class="skill">Databricks</span>
+            <span class="skill">PySpark</span>
+            <span class="skill">Apache Sedona</span>
+            <span class="skill">AWS</span>
+
+            <span class="skill">Neo4j</span>
+            <span class="skill">Firebase</span>
+
+            <span class="skill">Tableau</span>
+            <span class="skill">Excel</span>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMMUNITY -->
+
+<section>
+    <div class="container">
+        <h2>Community Service</h2>
+
+        <div class="card">
+            <h3>Agency for Integrated Care / Silver Generation Office</h3>
+            <div class="date">Oct 2025 - Present</div>
+
+            <ul>
+                <li>Engage elderly residents through community outreach programmes.</li>
+                <li>Support active ageing initiatives.</li>
+                <li>Develop communication and stakeholder engagement skills.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section>
+    <div class="container">
+        <h2>Contact</h2>
+
+        <div class="card">
+            <p>Email: tankeexiang@u.nus.edu</p>
+            <p>GitHub: github.com/kee-x</p>
+            <p>LinkedIn: linkedin.com/in/kee-xiang-tan-157476163</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Tan Kee Xiang
+</footer>
+
 </body>
 </html>
