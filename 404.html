@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;url=/" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        const redirect = window.location.pathname + window.location.search + window.location.hash;
+        const target = "/?redirect=" + encodeURIComponent(redirect);
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
