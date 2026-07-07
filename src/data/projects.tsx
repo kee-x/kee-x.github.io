@@ -1,6 +1,7 @@
 import { Brain, Code2, BarChart3, ShoppingCart, Store } from "lucide-react";
 import type { ReactNode } from "react";
 import { GITHUB_PROFILE_URL } from "../app/siteConfig";
+import nccsLogo from "../../Images/nccs logo.png";
 
 export type ProjectCategory = "ai-ml" | "data-analytics" | "web-dev";
 
@@ -72,7 +73,7 @@ export const projects: Project[] = [
     stack: ["LangGraph", "LangChain", "Ollama", "ClinicalBERT", "FAISS", "DuckDB", "OMOP CDM", "Python"],
     accentColor: "#0ea5e9",
     github: GITHUB_PROFILE_URL,
-    icon: <Brain size={26} />,
+    icon: <img src={nccsLogo} alt="NCCS logo" className="w-6 h-6 object-contain" />,
     executiveSummary:
       "Clinical experts face immense operational delays when interrogating highly-regulated observational health repositories like the OMOP Common Data Model (CDM). Automated cloud-based Text-to-SQL frameworks are unviable in healthcare — strict data privacy laws prohibit sending patient data over external APIs, and safety standards forbid trusting raw, unverified LLM output.\n\nAs a core team member, I co-architected a stateful multi-agent analytics copilot running entirely inside an offline, zero-egress environment via Ollama. The system maps natural language clinical queries into highly accurate, explainable DuckDB SQL against OMOP CDM v5.4. By grounding complex medical terms to standardized vocabularies using ClinicalBERT and FAISS, and implementing three mandatory Human-In-The-Loop (HITL) interruption checkpoints via LangGraph, the application slashes hypothesis testing turnaround from weeks to minutes while enforcing total auditability and ironclad data privacy.",
     situation:

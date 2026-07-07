@@ -51,6 +51,7 @@ import {
 } from "lucide-react";
 import { useDarkMode } from "./Root";
 import { projects, type ProjectCategory, CATEGORY_LABELS } from "../data/projects";
+import photoOfMe from "../../Images/Photo of me.jpg";
 import {
   EMAIL_ADDRESS,
   GITHUB_PROFILE_URL,
@@ -715,9 +716,12 @@ export default function PortfolioPage() {
               </div>
               <div className="md:col-span-2 flex justify-center md:justify-end">
                 <div className="relative w-64 h-72 md:w-72 md:h-80 rounded-2xl overflow-hidden border-2 border-border bg-secondary flex flex-col items-center justify-center gap-3">
-                  <div className="absolute inset-0 opacity-20" style={{ background: "radial-gradient(ellipse at 60% 30%, #00d4ff 0%, transparent 65%), radial-gradient(ellipse at 30% 80%, #a78bfa 0%, transparent 60%)" }} />
-                  <UserCircle2 size={80} className="text-muted-foreground relative z-10 opacity-40" />
-                  <p className="text-xs text-muted-foreground relative z-10 opacity-60 text-center px-6">Your photo here</p>
+                  <img
+                    src={photoOfMe}
+                    alt="Photo of Kee Xiang"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, #00d4ff, #a78bfa)" }} />
                 </div>
               </div>

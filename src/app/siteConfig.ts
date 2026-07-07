@@ -5,6 +5,7 @@ import nusLogo from "../../Images/NUS.webp";
 import ngeeAnnLogo from "../../Images/ngee ann logo.png";
 import nccsLetter from "../../Images/Tan Kee Xiang NCCS.docx";
 import nccsLetterPdf from "../../Images/NCCS testimonial PDF.pdf";
+import mhaTestimonialPdf from "../../Images/Tan Kee Xiang_Testimonial_MHA.pdf";
 
 export const GITHUB_PROFILE_URL = "https://github.com/kee-x";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/kee-xiang-tan-157476163/";
@@ -33,14 +34,14 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Dr Ryan Shea Tan Ying Cong",
     role: "Consultant, Division of Medical Oncology, National Cancer Centre Singapore",
     sourceLabel: "NCCS testimonial letter",
-    sourceUrl: nccsLetter,
+    sourceUrl: nccsLetterPdf,
   },
   {
     quote:
-      "He worked well with others, integrated seamlessly into the team, and was a pleasure to work with throughout the project.",
-    author: "Dr Ryan Shea Tan Ying Cong",
-    role: "Consultant, Division of Medical Oncology, National Cancer Centre Singapore",
-    sourceLabel: "PDF copy",
-    sourceUrl: nccsLetterPdf,
+      "Tan Kee Xiang was attached to the Ministry of Home Affairs (MHA) as a Data Science intern from 13 May to 31 Dec 2025. During the internship, he built an LLM-based pipeline to extract entities and relationships from unstructured Cyber Threat Intelligence data, fine-tuned models for cybersecurity use cases, and improved geospatial processing in Apache Spark. He learned domain knowledge quickly, worked proactively, and showed strong initiative, resilience, and cross-disciplinary learning agility.",
+    author: "Ministry of Home Affairs",
+    role: "Data Science internship testimonial",
+    sourceLabel: "MHA testimonial PDF",
+    sourceUrl: mhaTestimonialPdf,
   },
 ];

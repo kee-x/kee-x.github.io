@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import { ArrowLeft, Github, Sun, Moon, ExternalLink } from "lucide-react";
 import { useDarkMode } from "./Root";
@@ -67,6 +68,10 @@ export default function ProjectDetail() {
   const navigate = useNavigate();
   const { isDark, toggle } = useDarkMode();
   const project = id ? getProjectById(id) : undefined;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [id]);
 
   const categoryColors: Record<string, string> = {
     "ai-ml": "#0ea5e9",
