@@ -372,7 +372,7 @@ function ExperienceCard({ item }: { item: (typeof workExperience)[0] }) {
         <ul className="space-y-2">
           {item.bullets.map((b, i) => (
             <li key={i} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
-              <span className="text-primary mt-1.5 flex-shrink-0">▸</span>
+              <span className="text-primary flex-shrink-0">▸</span>
               <span>{b}</span>
             </li>
           ))}
@@ -411,7 +411,7 @@ function EducationCard({ item, isLast }: { item: (typeof education)[0]; isLast: 
         <ul className="space-y-2 mb-4">
           {item.bullets.map((b, i) => (
             <li key={i} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
-              <span className="text-primary mt-1.5 flex-shrink-0">▸</span>
+              <span className="text-primary flex-shrink-0">▸</span>
               <span>{b}</span>
             </li>
           ))}
@@ -637,7 +637,7 @@ export default function PortfolioPage() {
             <button onClick={toggle} className="w-8 h-8 flex items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all duration-200" aria-label="Toggle theme">
               {isDark ? <Sun size={15} /> : <Moon size={15} />}
             </button>
-            <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-primary/40 text-primary text-sm font-medium hover:bg-primary/10 transition-all duration-200">
+            <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-primary/40 text-primary text-sm font-medium hover:bg-primary/10 transition-all duration-200">
               <Download size={14} /> Resume
             </a>
           </div>
@@ -649,7 +649,7 @@ export default function PortfolioPage() {
           <div className="md:hidden bg-card border-b border-border px-6 py-6 flex flex-col gap-5">
             {navLinks.map((l) => <NavLink key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</NavLink>)}
             <div className="flex items-center gap-3">
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/40 text-primary text-sm font-medium hover:bg-primary/10">
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/40 text-primary text-sm font-medium hover:bg-primary/10">
                 <Download size={14} /> Resume
               </a>
               <button onClick={toggle} className="w-9 h-9 flex items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary/40">
@@ -682,7 +682,7 @@ export default function PortfolioPage() {
                 <a href="#projects" onClick={(e) => { e.preventDefault(); document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" }); }} className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5">
                   View My Work <ArrowRight size={16} />
                 </a>
-                <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium text-sm hover:border-primary/40 hover:text-primary transition-all duration-200">
+                <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium text-sm hover:border-primary/40 hover:text-primary transition-all duration-200">
                   <Download size={16} /> Download Resume
                 </a>
               </div>

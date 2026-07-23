@@ -31,9 +31,14 @@ function Divider() {
 function ProjectHero({ project }: { project: Project }) {
   return (
     <div
-      className="w-full h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden relative flex items-center justify-center"
+      className="w-full rounded-2xl overflow-hidden relative flex items-center justify-center p-4 sm:p-6"
       style={{ background: `linear-gradient(135deg, ${project.accentColor}18 0%, ${project.accentColor}06 100%)` }}
     >
+      <img
+        src={project.screenshot}
+        alt={`${project.title} screenshot`}
+        className="relative z-10 h-auto w-full max-h-[70vh] object-contain"
+      />
       {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -47,16 +52,7 @@ function ProjectHero({ project }: { project: Project }) {
         className="absolute inset-0"
         style={{ background: `radial-gradient(ellipse at 50% 50%, ${project.accentColor}20 0%, transparent 65%)` }}
       />
-      {/* Center content */}
-      <div className="relative z-10 flex flex-col items-center gap-4 text-center px-8">
-        <div
-          className="w-20 h-20 rounded-2xl flex items-center justify-center"
-          style={{ background: `${project.accentColor}20`, color: project.accentColor, boxShadow: `0 0 32px ${project.accentColor}30` }}
-        >
-          <span className="scale-[1.8]">{project.icon}</span>
-        </div>
-        <p className="text-xs font-mono text-muted-foreground opacity-60 tracking-widest uppercase">Project Screenshot Placeholder</p>
-      </div>
+      <div className="absolute inset-0 bg-background/10" />
     </div>
   );
 }

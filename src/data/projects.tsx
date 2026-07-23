@@ -2,6 +2,11 @@ import { Brain, Code2, BarChart3, ShoppingCart, Store } from "lucide-react";
 import type { ReactNode } from "react";
 import { GITHUB_PROFILE_URL } from "../app/siteConfig";
 import nccsLogo from "../../Images/nccs logo.png";
+import healthcareScreenshot from "../../Images/agenticaihealthcare.png";
+import defendantLiabilityScreenshot from "../../Images/JudicialWallpaper.avif";
+import loanDefaultScreenshot from "../../Images/LoanDefault.jpeg";
+import fairTrackerScreenshot from "../../Images/TheFairTracker.png";
+import communityMartScreenshot from "../../Images/Hack4Good.jpg";
 
 export type ProjectCategory = "ai-ml" | "data-analytics" | "web-dev";
 
@@ -41,6 +46,7 @@ export interface Project {
   accentColor: string;
   github: string;
   icon: ReactNode;
+  screenshot: string;
   // Detail page
   executiveSummary: string;
   situation: string;
@@ -74,6 +80,7 @@ export const projects: Project[] = [
     accentColor: "#0ea5e9",
     github: GITHUB_PROFILE_URL,
     icon: <img src={nccsLogo} alt="NCCS logo" className="w-6 h-6 object-contain" />,
+    screenshot: healthcareScreenshot,
     executiveSummary:
       "Clinical experts face immense operational delays when interrogating highly-regulated observational health repositories like the OMOP Common Data Model (CDM). Automated cloud-based Text-to-SQL frameworks are unviable in healthcare — strict data privacy laws prohibit sending patient data over external APIs, and safety standards forbid trusting raw, unverified LLM output.\n\nAs a core team member, I co-architected a stateful multi-agent analytics copilot running entirely inside an offline, zero-egress environment via Ollama. The system maps natural language clinical queries into highly accurate, explainable DuckDB SQL against OMOP CDM v5.4. By grounding complex medical terms to standardized vocabularies using ClinicalBERT and FAISS, and implementing three mandatory Human-In-The-Loop (HITL) interruption checkpoints via LangGraph, the application slashes hypothesis testing turnaround from weeks to minutes while enforcing total auditability and ironclad data privacy.",
     situation:
@@ -167,6 +174,7 @@ export const projects: Project[] = [
     accentColor: "#7c3aed",
     github: GITHUB_PROFILE_URL,
     icon: <Code2 size={26} />,
+    screenshot: defendantLiabilityScreenshot,
     executiveSummary:
       "Predicting defendant liability in corporate litigation is incredibly complex due to multi-level legal nuances, massive document lengths, and the subjective nature of judicial decisions. Legal professionals traditionally spend hundreds of hours manually auditing past PDF case laws to assess risk.\n\nThis project introduces a specialized NLP and deep learning pipeline that ingests raw, unstructured judicial judgments and outputs objective, data-driven assessments of defendant liability. The engineering core focuses on solving standard model failures in legal tech: breaking down multi-page document structures via a Hierarchical Attention Network (HAN) with SwiGLU activations, and implementing strict adversarial data leakage controls to ensure the model predicts outcomes based on pre-decision facts rather than clues hidden within the text.",
     situation:
@@ -241,6 +249,7 @@ export const projects: Project[] = [
     accentColor: "#059669",
     github: GITHUB_PROFILE_URL,
     icon: <BarChart3 size={26} />,
+    screenshot: loanDefaultScreenshot,
     executiveSummary:
       "Peer-to-peer (P2P) lending platforms face massive financial risk exposure from borrower defaults. As transaction volumes scale into millions of records, traditional centralized credit scoring models fail due to memory constraints and an inability to map complex risk factors in highly imbalanced real-world distributions.\n\nI engineered a distributed, end-to-end Big Data machine learning pipeline using Apache Spark (PySpark) to ingest, clean, and model LendingClub's historical credit dataset — spanning 2007–2020 and comprising 2.9 million loan records / 1.7GB. By optimizing models for a high Recall Rate of 82.61%, the system isolates the vast majority of high-risk loans for manual underwriting, minimizing platform capital loss and significantly improving risk-adjusted returns.",
     situation:
@@ -320,6 +329,7 @@ export const projects: Project[] = [
     accentColor: "#f59e0b",
     github: GITHUB_PROFILE_URL,
     icon: <ShoppingCart size={26} />,
+    screenshot: fairTrackerScreenshot,
     executiveSummary:
       "Rising living costs and global economic disruptions have driven up food inflation, making daily grocery shopping increasingly stressful for Singaporeans. Despite fierce competition among major supermarket chains, consumers lacked a transparent, centralized utility to audit and contrast prices fluidly, resulting in fragmented information and inefficient spending.\n\nThe Fair Tracker is a centralized, full-stack web application that provides transparent, real-time price comparisons across major Singaporean supermarket chains. Built by a collaborative engineering team over two intensive Agile sprints, the platform streamlines the shopping experience for budget-conscious families, students, and seniors by turning fragmented pricing data into actionable, cost-saving insights.",
     situation:
@@ -405,6 +415,7 @@ export const projects: Project[] = [
     accentColor: "#ec4899",
     github: GITHUB_PROFILE_URL,
     icon: <Store size={26} />,
+    screenshot: communityMartScreenshot,
     executiveSummary:
       "Managing inventory, resident allowances, and product distributions manually is inefficient, labor-intensive, and prone to accounting errors. During the Hack4Good 2025 hackathon, our team tackled this operational bottleneck for the Muhammadiyah Welfare Home (MWH) — a shelter for boys aged 10 to 19 that utilizes an internal behavioral reward system.\n\nCommunity Mart is a centralized, full-stack web application designed to digitize and automate the home's token economy. Built entirely within a 48-hour hackathon timeline, the platform completely replaces physical coupons with a robust, real-time digital voucher system. Featuring a responsive resident marketplace, a gamified live auction engine, an NLP chatbot powered by Botpress, and an auditable administrative command dashboard, the system streamlines internal logistics while offering residents a modernized, dignified, and highly accessible way to manage their balances.",
     situation:
